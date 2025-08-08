@@ -1,0 +1,44 @@
+<header className="bg-white shadow-md sticky top-0 z-50">
+      <div className="max-w-[1200px] mx-auto px-5 flex justify-between items-center py-4">
+        <div className="flex items-center gap-2 text-2xl font-bold text-[#ffbb00]">
+          <i className="fas fa-lemon text-[28px]"></i>
+          <span>Mango Market</span>
+        </div>
+
+        <button className="text-[#333] text-2xl lg:hidden">
+          <i className="fas fa-bars"></i>
+        </button>
+
+        
+
+        <div className="flex gap-4 items-center">
+          <div className="relative">
+            <i className="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-[#777]"></i>
+            <input
+              type="text"
+              placeholder="Search products..."
+              value=""
+              readOnly={true}
+              className="pl-10 pr-4 py-2 border border-[#eee] rounded-full focus:outline-none focus:border-[#ffbb00] focus:ring-2 focus:ring-[#ffbb0040] transition-all"
+            />
+          </div>
+
+          <button className="text-xl text-[#333] hover:text-[#ffbb00] transition relative" onClick={() => window.location.href = "/profile"}>
+            <i className="fas fa-user"></i>
+          </button>
+
+          <button className="text-xl text-[#333] hover:text-[#ffbb00] transition" onClick={onLogout}>
+            <i className="fas fa-heart"></i>
+          </button>
+
+          <button className="text-xl text-[#333] hover:text-[#ffbb00] transition relative" onClick={handleCartClick}>
+            <i className="fas fa-shopping-cart"></i>
+            <span className="absolute -top-2 -right-2 bg-[#ffbb00] text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">{totalItems}</span>
+          </button>
+        </div>
+      </div>
+
+      {showLoginModal && (
+        <LoginModal onClose={() => setShowLoginModal(false)} onLogin={handleLoginSuccess} />
+      )}
+    </header>
