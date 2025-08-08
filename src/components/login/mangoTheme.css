@@ -1,0 +1,97 @@
+
+:root {
+  --mango-primary: #FFC107;
+  --mango-secondary: #FF9800;
+  --mango-light: #FFECB3;
+  --mango-dark: #FF6F00;
+  --mango-text: #333333;
+  --mango-bg: #FFFFFF;
+}
+
+/* body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--mango-light);
+  color: var(--mango-text);
+  margin: 0;
+  padding: 0;
+} */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+
+
+.cart {
+  background-color: var(--mango-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.cart h2 {
+  color: var(--mango-primary);
+  margin-top: 0;
+}
+
+.login-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.login-modal .modal-content {
+  background-color: var(--mango-bg);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-modal h2 {
+  color: var(--mango-primary);
+  margin-top: 0;
+}
+
+.login-modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-modal span {
+  margin-top: 10px;
+}
+
+.login-modal input {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-modal button {
+  margin-top: 20px;
+  background-color: var(--mango-primary);
+  color: var(--mango-bg);
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-modal button:hover {
+  background-color: var(--mango-dark);
+}
